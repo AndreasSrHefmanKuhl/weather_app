@@ -1,49 +1,29 @@
 import 'package:flutter/material.dart';
+import 'weather_repo.dart';
+//import 'package:simple_weahter_app_ad/weather_data.dart';
+import 'weather_data.dart';
 
-void main() {}
+void main() {
+  final WeatherRepo weatherRepo = WeatherRepo();
+
+  runApp(MainApp(repository: weatherRepo));
+}
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: WeatherApp(),
-    );
-  }
-}
-
-class WeatherApp extends StatelessWidget {
-  const WeatherApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('My Weather'),
-      ),
-      body: Container(
-          child: Center(
-        child: Text(
-          'Willkommen zur Wetter-App!',
-          style: TextStyle(
-            fontSize: 24,
-            color: Colors.blue,
-          ),
-        ),
-      )),
-    );
-  }
-}
-
-class WeatherData {
-  final String city;
-  final double temperature;
-  final String weatherCondition;
-
-  WeatherData({
-    required this.city,
-    required this.temperature,
-    required this.weatherCondition,
+  const MainApp({
+    super.key,
+    required this.repository,
   });
+
+  final WeatherRepo repository;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: WeatherApp(repository: repository),
+    );
+  }
 }
+
+// WeatherData weatherNow =
+//     WeatherData(city: "Krefeld", temperature: 24.4, weaterCondition: "Sunny");
