@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'weather_repo.dart';
 //import 'package:simple_weahter_app_ad/weather_data.dart';
-import 'weather_data.dart';
+import 'weather_app.dart';
 
 void main() {
   final WeatherRepo weatherRepo = WeatherRepo();
