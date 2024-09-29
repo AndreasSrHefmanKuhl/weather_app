@@ -20,6 +20,9 @@ class WeatherApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+        child: Scaffold(
+      body: Center(),
+    ));
   }
 }
