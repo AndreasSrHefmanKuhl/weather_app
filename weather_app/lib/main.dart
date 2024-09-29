@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -20,6 +19,12 @@ class WeatherApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text()));
+    return Scaffold(
+      appBar: AppBar(
+        title:   
+ const Text('My Weather'),
+      ),
+      body: Container(),
+    );
   }
 }
