@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-}
+void main() {}
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -21,10 +20,18 @@ class WeatherApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:   
- const Text('My Weather'),
+        title: const Text('My Weather'),
       ),
-      body: Container(),
+      body: Container(
+          child: Center(
+        child: Text(
+          'Willkommen zur Wetter-App!',
+          style: TextStyle(
+            fontSize: 24,
+            color: Colors.blue,
+          ),
+        ),
+      )),
     );
   }
 }
